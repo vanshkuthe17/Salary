@@ -9,7 +9,13 @@ Original file is located at
 
 import pandas as pd
 
-df=pd.read_csv('/content/Salary_Dataset_DataScienceLovers.csv')
+import os
+
+# This finds the folder where your script is actually running
+base_path = os.path.dirname(__file__)
+file_path = os.path.join(base_path, 'Salary_Dataset_DataScienceLovers.csv')
+
+df = pd.read_csv(file_path)
 df.head()
 
 df.isnull().sum()
